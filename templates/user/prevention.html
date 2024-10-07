@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthCare</title>
+    <link rel="shortcut icon" href="{% static 'assets/image/hlogo.jpg' %}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding-top: 20px;
+        }
+        .content-section {
+            margin: 50px auto;
+            max-width: 800px;
+        }
+        h2 {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container content-section">
+        <h2 class="text-center mb-4">Disease Prevention and Health Maintenance</h2>
+        <p>Prevention is better than cure. By adopting healthy habits and staying informed about preventive care, you can reduce the risk of developing common diseases. Here’s how:</p>
+        <div>
+            <h4>1. Vaccinations</h4>
+            <p>Vaccinations are critical in preventing diseases like the flu, hepatitis, and measles. Stay up-to-date with your immunizations to protect yourself and those around you.</p>
+        </div>
+        <div>
+            <h4>2. Regular Screenings</h4>
+            <p>Get regular health screenings like blood pressure checks, cholesterol tests, and cancer screenings to catch potential health issues early.</p>
+        </div>
+        <div>
+            <h4>3. Healthy Lifestyle</h4>
+            <p>Eat a balanced diet, exercise regularly, and maintain a healthy weight to lower your chances of developing heart disease, diabetes, and other chronic conditions.</p>
+        </div>
+        <div>
+            <h4>4. Hygiene Practices</h4>
+            <p>Maintain good hygiene practices such as regular handwashing, proper food preparation, and keeping your living environment clean to prevent infections.</p>
+        </div>
+        <div>
+            <h4>5. Mental Health Care</h4>
+            <p>Taking care of your mental health is as important as physical health. Engage in stress-relief activities, get enough sleep, and seek support when needed.</p>
+        </div>
+        <div class="text-center mt-4">
+            <a href="{% url 'health' %}" class="btn btn-primary">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>

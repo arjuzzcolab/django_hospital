@@ -1,0 +1,132 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>HealthCare</title>
+    <link rel="shortcut icon" href="{% static 'assets/image/hlogo.jpg' %}" />
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="{% static 'assets/vendors/mdi/css/materialdesignicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendors/ti-icons/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendors/css/vendor.bundle.base.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendors/font-awesome/css/font-awesome.min.css' %}">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="{% static 'assets/vendors/jvectormap/jquery-jvectormap.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendors/flag-icon-css/css/flag-icons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendors/owl-carousel-2/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendors/owl-carousel-2/owl.theme.default.min.css' %}">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="{% static 'assets/css/style2.css' %}">
+    <!-- End layout styles -->
+     <style>
+      .sidebar {
+        height: 100vh; /* Full height of viewport */
+        background-color: #343a40;
+        color: white;
+        padding-top: 20px;
+    }
+     </style>
+   
+  </head>
+  <body>
+    <div class="container-scroller">
+      
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+       
+        <ul class="nav">
+          <li class="nav-item profile">
+            <div class="profile-desc">
+              
+           
+              
+            </div>
+          </li>
+          <li class="nav-item nav-category">
+            <span class="nav-link">Navigation</span>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="{% url 'doctorview' %}">
+              <span class="menu-icon">
+                <i class="mdi mdi-speedometer"></i>
+              </span>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="{% url 'list' %}" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <span class="menu-icon">
+                <i class="mdi mdi-laptop"></i>
+              </span>
+              <span class="menu-title">Appointments</span>
+              <i class="menu-arrow"></i>
+            </a>
+           
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="{% url 'details' %}">
+              <span class="menu-icon">
+                <i class="mdi mdi-playlist-play"></i>
+              </span>
+              <span class="menu-title">Medical History </span>
+              <i class="menu-arrow"></i>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="{% url 'prescription' %}">
+              <span class="menu-icon">
+                <i class="mdi mdi-table-large"></i>
+              </span>
+              <span class="menu-title">Prescription</span>
+              <i class="menu-arrow"></i>
+            </a>
+          </li>
+         
+         
+        
+        </ul>
+      </nav>
+     
+      <div class=" page-body-wrapper">
+  
+        <nav class="navbar p-0 fixed-top d-flex flex-row">
+         
+          <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+            <div class="navbar-menu-wrapper flex-grow-1 d-flex align-items-center justify-content-end">
+              <a href="{% url 'logout' %}" class="btn btn-danger" style="font-size: 15px; color: black; height: 40px; width: 100px;">Logout</a>
+            </div>
+          </div>
+        </nav>
+        
+<div class="main-panel">
+  <div class="content-wrapper">
+    <div class="row">
+      <h1 class="text-center">Welcome Doctor {{doctor.name}}</h1>
+   
+    </div>
+    <div class="d-flex justify-content-center">
+      {% if has_doctor %}
+      <h1></h1>
+      {% else %}
+      <a class="btn btn-primary" href="{% url 'create_doctor' %}" style="width: 130px;">Create Profile</a>
+      {% endif %}
+    </div>
+  </div>
+  <!-- partial -->
+</div>
+
+      <!-- page-body-wrapper ends -->
+    </div>
+   
+  
+
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>HealthCare</title>
+    <link rel="shortcut icon" href="{% static 'assets/image/hlogo.jpg' %}" />
+</head>
+<body>
+    <div class="container">
+        {% if medical %}
+        <div class="row">
+    {% for i in medical %}
+    <div class="col-md-4">
+    <div class="card shadow" style="width: 18rem; margin-top: 50px;background-color: black;">
+       
+        <div class="card-body" style="color: white;">
+          <h5 class="card-title">Name: {{i.patient}}</h5>
+          <p class="card-text">Diagnosis: {{i.diagnosis}}</p>
+          <p class="card-text">Medications: {{i.medications}}</p>
+          <p class="card-text">Allergies: {{i.allergies}}</p>
+      
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% else %}
+
+<div class="container d-flex flex-column justify-content-center align-items-center text-center" style="margin-top: 60px; background-color: black; height: 200px;">
+    <h1 style="color: white;">You Have No Appointment</h1>
+    <h3 style="color: white;">First Register Your Details and Take Appointment</h3>
+    <a href="{% url 'userview' %}" class="btn btn-primary">Go Back</a>
+</div>
+
+
+{% endif %}
+    </div>
+</body>
+</html>

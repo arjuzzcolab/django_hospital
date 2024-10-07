@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthCare</title>
+    <link rel="shortcut icon" href="{% static 'assets/image/hlogo.jpg' %}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f4f6f9;
+        }
+        .hero-section {
+            background-color: #007bff;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .resources-section {
+            margin-top: 30px;
+        }
+        .resource-card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+        .resource-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .card-title {
+            color: #007bff;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    
+  
+    <div class="hero-section">
+        <a href="{% url 'userview' %}" class="btn btn-warning" style="float: left;margin-top: -30px;margin-left: 10px;">Go Back</a>
+        <h1>Health Education Resources</h1>
+        <p>Access educational materials, health tips, and resources to promote wellness and disease prevention.</p>
+    </div>
+
+   
+    <div class="container resources-section">
+        <div class="row">
+    
+            <div class="col-md-4">
+                <div class="card resource-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Health Tips</h5>
+                        <p class="card-text">Stay updated with daily health tips that help you maintain a healthy lifestyle. Learn more about balanced diets, exercise routines, and mental wellness.</p>
+                        <a href="{% url 'tips' %}" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+      
+            <div class="col-md-4">
+                <div class="card resource-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Disease Prevention</h5>
+                        <p class="card-text">Get guidance on how to prevent common diseases and maintain good health. Learn about vaccinations, screenings, and preventive health practices.</p>
+                        <a href="{% url 'prevention' %}" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+   
+            <div class="col-md-4">
+                <div class="card resource-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Wellness Resources</h5>
+                        <p class="card-text">Discover wellness tips and resources to enhance your physical and mental well-being. Access advice on stress management, relaxation, and self-care routines.</p>
+                        <a href="{% url 'resource' %}" class="btn btn-primary">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3>Educational Materials</h3>
+                <p>Browse through our collection of articles, videos, and guides to stay informed about various health topics:</p>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="https://www.youtube.com/@Stanford_CHE/videos" target="_blank">Understanding Hypertension</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://www.youtube.com/@Stanford_CHE/videos" target="_blank">Healthy Diets for Every Age</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://www.youtube.com/@Stanford_CHE/videos" target="_blank">Mental Health and Wellness</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://www.youtube.com/@Stanford_CHE/videos" target="_blank">How to Manage Diabetes</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://www.youtube.com/@Stanford_CHE/videos" target="_blank">Importance of Regular Exercise</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+</html>
